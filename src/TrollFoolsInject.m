@@ -1,4 +1,4 @@
-// src/TrollFoolsInject.c
+// src/TrollFoolsInject.m
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
