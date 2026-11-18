@@ -7,7 +7,7 @@ include $(THEOS)/makefiles/common.mk
 
 LIBRARY_NAME = TrollFoolsInject
 
-TrollFoolsInject_FILES = src/TrollFoolsInject.c
+TrollFoolsInject_FILES = src/TrollFoolsInject.m
 TrollFoolsInject_FRAMEWORKS = Foundation UIKit
 TrollFoolsInject_LIBRARIES = substrate
 TrollFoolsInject_INSTALL_PATH = /usr/lib
