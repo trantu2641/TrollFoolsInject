@@ -26,4 +26,3 @@ jobs:
         with:
           name: TrollFoolsInject
           path: TrollFoolsInject.dylib
-EOF
