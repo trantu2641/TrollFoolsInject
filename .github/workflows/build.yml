@@ -1,0 +1,29 @@
+name: Build Dylib
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Build dylib
+        run: |
+          xcrun --sdk iphoneos clang \
+            -arch arm64 \
+            -mios-version-min=14.0 \
+            -dynamiclib \
+            -framework Foundation \
+            -framework UIKit \
+            -o TrollFoolsInject.dylib \
+            src/TrollFoolsInject.c \
+            -install_name @rpath/TrollFoolsInject.dylib
+      
+      - name: Upload dylib
+        uses: actions/upload-artifact@v4
+        with:
+          name: TrollFoolsInject
+          path: TrollFoolsInject.dylib
+EOF
