@@ -18,7 +18,7 @@ jobs:
             -framework Foundation \
             -framework UIKit \
             -o TrollFoolsInject.dylib \
-            src/TrollFoolsInject.c \
+            src/TrollFoolsInject.m \
             -install_name @rpath/TrollFoolsInject.dylib
       
       - name: Upload dylib
